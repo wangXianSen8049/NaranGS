@@ -1,0 +1,20 @@
+html,body{width: 100%;height: 100%;overflow: hidden;font-size: 100px; background:url(../img/bj.png) no-repeat center; }
+body{min-width: 900px;width: expression_r( document.body.clientWidth < 900 ? "899px" : "auto" );}
+.out{width:5.64rem;height: auto;overflow: hidden;margin: 0 auto; margin-top: 2rem;}
+.out .shang{width: 100%; height: auto;background:#01614A;overflow: hidden;}
+.out .shang div{width: 100%; height: auto;}
+.out .shang .head{display: flex; justify-content: center; align-items: center; margin-top: .4rem;}
+.out .shang .head img{width:2rem; height:100%; margin: 0 .14rem;}
+.out .shang .disanfang{display: flex; justify-content: center; align-items: center; margin-top: .16rem;}
+.out .shang .disanfang img{width: 3.31rem; height:100%;}
+
+.out .shang .san{font-family: 微软雅黑;font-size:.48rem;color: #FFFFFF;text-align: center;margin-top: .26rem;}
+.out .shang .huan{font-family: .微软雅黑;font-size:.18rem;color: #FFFFFF;letter-spacing: 0.08px; text-align: center;margin-top: .17rem;margin-bottom: .24rem;}
+
+input{outline: none;}
+.out .xia{width: 100%; background: rgba(255,255,255,0.75);box-shadow: 0 2px 8px 0 rgba(0,0,0,0.20);overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center;}
+.out .xia #username{width: 4.27rem; height: .48rem; margin-top: .24rem; text-indent: .12rem;font-family: 微软雅黑;font-size: .2rem;color:#999;background: #FFFFFF;border: 0 solid #BBBBBB;border-radius: 2.41px;}
+.out .xia #password{width: 4.27rem; height: .48rem;margin-top: .14rem;text-indent: .12rem;font-family: 微软雅黑;font-size: .2rem;color:#999;background: #FFFFFF;border: 0 solid #BBBBBB;border-radius: 2.41px;}
+.out .xia a{width: 4.27rem; height: .5rem; line-height: .5rem;text-align: center;background: #00A780;border-radius: 3.6px; margin-top: .24rem; margin-bottom: .4rem; color: white;font-family: 微软雅黑;font-size:.2rem;}
+.xia a:hover{ background: #31b798;}
+.xia a:active{ background: #009572;}

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/common.css"/>
+		<link rel="stylesheet" type="text/css" href="css/producer_xiang.css"/>
+		<script src="js/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/util/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/provinceCity.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/year_month_day.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.form.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/producer_xiang.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/base.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<form id="zong" action="javascript" method= "post" enctype ="multipart/form-data">
+			<div class="message">
+		  		<div class="head">
+		  			<span></span>
+		  			<p>基本信息</p>
+		  			<span></span>
+		  		</div>
+		  		<div class="li">
+		  			<input type="text" id="name" name="name"/>
+		  			<span>公司名称：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping mingcheng" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm">
+		  			<select id="hangye" >
+		  				<option value="农业（种植）">农业（种植）</option>
+		  				<option value="畜牧">畜牧</option>
+		  				<option value="渔业">渔业</option>
+		  				<option value="食品加工">食品加工</option>
+		  				<option value="酒,饮料生产">酒,饮料生产</option>
+		  				<option value="动物类农副食品加工">动物类农副食品加工</option>
+		  				<option value="植物类农副食品加工">植物类农副食品加工</option>
+		  				<option value="其他">其他</option>
+		  			</select>
+		  			<span>所属行业：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping hangy" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm">
+		  			<select id="selCity"></select>
+		  			<select id="selProvince" onchange="provinceChange();"></select>    
+		  			<span>所属区域：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping quyu" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm">
+		  			<input type="text" id="charger" name="charger"/>
+		  			<span>法定代表人：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping faren" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm " id="date">
+					<select name="days" id="days0"></select>
+					<select name="month" id="month0" > </select>
+					<select name="year0" id="year" ></select>
+					<span>成立时间：</span>
+					<i>*</i>
+		  		</div>
+		  		<p class="ping riqi" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm">
+		  			<input type="text" id="hotline"/>
+		  			<span>公司电话：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping dianhua" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm">
+		  			<input type="text" id="location"/>
+		  			<span>公司地址：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping dizhi" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm1">
+		  			<div id="preview" onclick="pa.click()"></div>
+					<input type="hidden" id="logo"  name="logo" value="" />
+		  			<span>公司Logo：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping logotu" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li comm">
+		  			<textarea name="textarea" id="textarea"></textarea>
+		  			<span>公司介绍：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping jieshao" contenteditable="true" style="color: #FF4F65;"></p>
+		 	</div>
+		  	<div class="prove">
+		  		<div class="head">
+		  			<span></span>
+		  			<p>资质证明</p>
+		  			<span></span>
+		  		</div>
+		  		<div class="li">
+		  			<div id="preview_1" onclick="pa_1.click()"></div>
+					<input type="hidden" id="businessLicense"  name="businessLicense" value="" />
+		  			<span>经营许可证：</span>
+					<div id="preview_2" onclick="pa_2.click()"></div>
+					<input type="hidden" id="license"  name="license" value="" />
+		  			<span>营业执照：<br/>（五证合一）</span>
+		  			<i>*</i>
+		  		</div>
+		  		<div class="jing">
+		  			<p class="ping yingye" contenteditable="true" style="color: #FF4F65;"></p>
+		  			<p class="ping jingying" contenteditable="true" style="color: #FF4F65;"></p>
+		  		</div>
+		  		<div class="li">
+		  			<div id="preview_3_1"  onclick="pa_3_1.click()"></div>
+					<input type="hidden" id="fangzi"  name="fangzi" value="" />
+		  			<span>土地／房屋<br/>租赁证明：</span>
+		  			
+		  			<div id="preview_3"  onclick="pa_3.click()"></div>
+					<input type="hidden" id="hygieneLicense"  name="hygieneLicense" value="" />
+		  			<span>卫生许可证：</span>
+		  		</div>
+		  		<div class="jing">
+		  			<p class="ping weisheng" contenteditable="true" style="color: #FF4F65;"></p>
+		  			<p class="ping fangwu" contenteditable="true" style="color: #FF4F65;"></p>
+		  		</div>
+		  		<div class="li">
+		  			<div id="preview_4" onclick="pa_4.click()" class="otherLi"></div>
+					<input type="hidden" id="otherLicenses_1"  name="otherLicenses_1" value="" />
+		  			<div id="preview_5" onclick="pa_5.click()" class="otherLi"></div>
+					<input type="hidden" id="otherLicenses_2"  name="otherLicenses_2" value="" />
+		  			<span>其他资质证明：</span>
+		  			<span>(其他与产品安<br/>全或生产过程相<br/>关的资质）</span>
+		  			
+		  		</div>
+		  		<div class="li comm3">
+		  			<div id="preview_6" onclick="pa_6.click()" class="otherLi"></div>
+					<input type="hidden" id="otherLicenses_3"  name="otherLicenses_3" value="" />
+		  			<div id="preview_7" onclick="pa_7.click()" class="otherLi"></div>
+					<input type="hidden" id="otherLicenses_4"  name="otherLicenses_4" value="" />
+		  		</div>
+		  		<p class="ping qita" contenteditable="true" style="color: #FF4F65;"></p>
+		  	</div>
+		  	<div class="yijian">
+		  		<div class="head">
+		  			<span></span>
+		  			<p>意见书</p>
+		  			<span></span>
+		  		</div>
+		  		<div class="li" id="tuijian">
+		  			<img src="img/tianjia_xiao.png" class="jia" onclick="add_yijian()" />
+		  			<a  size="20" name="upfile" id="upfile" class="upfile">未选择任何文件</a> 
+		  			<input type="button" id="dian" class="dian" value="浏览" onclick="path.click()"> 
+		  			<input type="hidden" id="recommendation" name="recommendation" value=""/>
+					<span>推荐意见书 ：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping tuijian" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li" id="falv">
+		  			<img src="img/tianjia_xiao.png" class="jia" onclick="add_falv()" />
+		  			<a  size="20" name="upfile" id="upfile2" class="upfile">未选择任何文件</a> 
+		  			<input type="button" id="dian2" class="dian" value="浏览" onclick="path2.click()">
+		  			<input type="hidden" id="legalOpinion" name="legalOpinion" value=""/>
+					<span>法律意见书：</span>
+		  			<i>*</i>
+		  		</div>
+		  		<p class="ping falv" contenteditable="true" style="color: #FF4F65;"></p>
+		  	</div>
+			<div class="huanjing">
+		  		<div class="head">
+		  			<span></span>
+		  			<p>其他资料</p>
+		  			<span></span>
+		  		</div>
+		  		<div class="li">
+		  			<a  size="20" name="upfile" id="upfile3" class="upfile envAssessmentReport">未选择任何文件</a> 
+		  			<input type="button" id="dian3" class="dian" value="浏览" onclick="path3.click()">
+		  			<input type="hidden" id="envAssessmentReport" name="envAssessmentReport" value=""/>
+					<span>环境评价报告：</span>
+					<i>*</i>
+		  		</div>
+		  		<p class="ping h_pingjia" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li">
+		  			<a  size="20" name="upfile" id="upfile4" class="upfile envQualityReport">未选择任何文件</a> 
+		  			<input type="button" id="dian4" class="dian" value="浏览" onclick="path4.click()">
+		  			<input type="hidden" id="envQualityReport" name="envQualityReport" value=""/>
+					<span>环境质量检测报告：</span>
+					<i>*</i>
+		  		</div>
+		  		<p class="ping h_jiance" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class="li">
+		  			<a  size="20" name="upfile" id="upfile5" class="upfile envImpactReport">未选择任何文件</a> 
+		  			<input type="button" id="dian5" class="dian dian1" value="浏览" onclick="path5.click()">
+		  			<input type="hidden" id="envImpactReport" name="envImpactReport" value=""/>
+					<span>环境影响报告：</span>
+		  		</div>
+		  		<p class="ping h_yingxiang" contenteditable="true" style="color: #FF4F65;"></p>
+		  		<div class='li huanj' id="huanj">
+		  			<img src='img/tianjia_xiao.png' onclick='add_other(this)'/>
+		  			<a  size='20' id="upfile9">未选择任何文件</a>
+		  			<input type='button'  value='浏览'  onclick='path9.click()'>
+		  			<input type='hidden' id="other_baogao"/>
+					<input type='text' placeholder='其他资料'/>
+				</div>
+		  	</div>
+			<div class="product">
+				<div class="head">
+		  			<span></span>
+		  			<p>产品信息</p>
+		  			<span></span>
+		  			<div class="add_2" onclick="produce_add()">添加</div>
+					<div class="reduce_2" onclick="product_reduce()">删除</div>
+		  		</div>
+		  	</div>
+		  	<div class="foot3">
+		  		<div class="butt">
+		  			<a class="button_5" value="确认编辑" onclick="zong()">确认编辑</a>
+		  	 		<a  class="button_5" value="返回" onclick="fanhui()"/>返回</a>
+		  		</div>
+		  	 </div>
+		</form>
+				<!--隐藏的form表单 图片提交-->
+		<form id="up" action="javascript:up_1" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa" name="logo" onchange="up(this,'preview','#up','#logo')" type="hidden"/>
+		</form>
+		<form id="up_1" action="javascript:up_1" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_1" name="businessLicense" onchange="up(this,'preview_1','#up_1','#businessLicense')" type="hidden"/>
+		</form>
+		
+		<form id="up_2" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_2" name="license" onchange="up(this,'preview_2','#up_2','#license')" type="hidden"/>
+		</form>
+		<form id="up_3" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_3" name="hygieneLicense" onchange="up(this,'preview_3','#up_3','#hygieneLicense')" type="hidden"/>
+		</form>
+		<form id="up_4" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_4" name="otherLicenses_1" onchange="up(this,'preview_4','#up_4','#otherLicenses_1')" type="hidden"/>
+		</form>
+		<form id="up_5" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_5" name="otherLicenses_2" onchange="up(this,'preview_5','#up_5','#otherLicenses_2')" type="hidden"/>
+		</form>
+		<form id="up_6" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_6" name="otherLicenses_3" onchange="up(this,'preview_6','#up_6','#otherLicenses_3')" type="hidden"/>
+		</form>
+		<form id="up_7" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_7" name="otherLicenses_4" onchange="up(this,'preview_7','#up_7','#otherLicenses_4')" type="hidden"/>
+		</form>
+		<form id="up_8" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_8" name="spec_1" onchange="up(this,'preview_8','#up_8','#spec_1')" type="hidden"/>
+		</form>
+		<form id="up_9" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_9" name="pics_2" onchange="up(this,'preview_9','#up_9','#pics_2')" type="hidden"/>
+		</form>
+		<form id="up_10" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_10" name="pics_1" onchange="up(this,'preview_10','#up_10','#pics_1')" type="hidden"/>
+		</form>
+		<form id="up_11" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_11" name="license" onchange="up(this,'preview_11','#up_11','#pics_4')" type="hidden"/>
+		</form>
+		<form id="up_12" action="javascript:up_2" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept="image/*" id="pa_12" name="pics_3" onchange="up(this,'preview_12','#up_12','#pics_3')" type="hidden"/>
+		</form>
+		
+		
+		<!--隐藏的form表单文件提交-->
+		<form id="file_1" action="javascript:upfile" method= "post" enctype ="multipart/form-data"> 
+			<input type="file" accept=".doc,.pdf" id="path3" name="path3"  onchange="upfile('#file_1','#upfile3','#path3','#envAssessmentReport')">
+		</form>
+		<form id="file_2" action="javascript:upfile" method= "post" enctype ="multipart/form-data">
+			<input type="file" accept=".doc,.pdf" id="path4" name="path4" onchange="upfile('#file_2','#upfile4','#path4','#envQualityReport')">
+		</form>
+		<form id="file_3" action="javascript:upfile" method= "post" enctype ="multipart/form-data">
+			<input type="file" accept=".doc,.pdf" id="path5" name="path5" onchange="upfile('#file_3','#upfile5','#path5','#envImpactReport')">
+		</form>
+		<form id="file_4" action="javascript:upfile" method= "post" enctype ="multipart/form-data">
+			<input type="file" accept=".doc,.pdf" id="path" name="path" onchange="upfile('#file_4','#upfile','#path','#recommendation')">
+		</form>
+		<form id="file_5" action="javascript:upfile" method= "post" enctype ="multipart/form-data">
+			<input type="file" accept=".doc,.pdf" id="path1" name="path1" onchange="upfile('#file_5','#upfile1','#path1','#auditForm')">
+		</form>
+		<form id="file_6" action="javascript:upfile" method= "post" enctype ="multipart/form-data">
+			<input type="file" accept=".doc,.pdf" id="path2" name="path2" onchange="upfile('#file_6','#upfile2','#path2','#legalOpinion')">
+		</form>
+		<form id="file_7" action="javascript:upfile" method= "post" enctype ="multipart/form-data">
+			<input type="file" accept=".doc,.pdf" id="path6" name="path6" onchange="upfile('#file_7','#upfile6','#path6','#otherReport_1')">
+		</form>
+		<form id="file_8" action="javascript:upfile" method= "post" enctype ="multipart/form-data" style="display: none;">
+			<input type="file" accept=".doc,.pdf" id="path8" name="path8" onchange="upfile('#file_8','#upfile8','#path8','#qualityReport_1')">
+		</form>
+		<form id="file_9" action="javascript:upfile" method= "post" enctype ="multipart/form-data" style="display: none;">
+			<input type="file" id="path9"  accept=".doc,.pdf" name="path8" onchange="upfile('#file_9','#upfile9','#path9','#other_baogao')">
+		</form>
+		<!--其余表单提交-->
+	</body>
+</html>

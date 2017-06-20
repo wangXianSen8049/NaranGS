@@ -1,0 +1,63 @@
+html{font-size: 100px; }
+body{min-width: 900px;width: expression_r( document.body.clientWidth < 900 ? "899px" : "auto" );}
+.header{width: 100%;height: 100%; overflow:hidden; background:url(../img/sqrz_bj.png) center no-repeat;display: flex;flex-direction: column;  align-items: center; position: relative;}
+.header .img_1{width: 2.3rem; height: 2.81rem;}
+.header span{width: 2.5rem; height:.6rem; border: 1px solid #FFFFFF;border-radius: 8px; font-size: .34rem;text-align: center;line-height: .6rem;color: #FFFFFF;margin-top:1.02rem;}
+.header p{font-family: PingFangSC-Light;font-size: .22rem;color: #FFFFFF;letter-spacing: 0;margin-top:.74rem;}
+.header .img_2{width: .3rem;position: absolute;margin-left: -0.1rem;}
+.header span:hover{background: white; color:#01614A ;}
+/*那然公社社员权益*/
+.rights{width: 100%; height:100%;background: #f5f5f5;overflow: hidden;display: flex;flex-direction: column;}
+.rights .head{font-family: .PingFangSC-Medium;font-size: .4rem;color: #01614A;letter-spacing: 0.15px;margin-top:1rem;display: flex;justify-content: center;align-items: center;}
+.rights .head img{ width: .7rem; height: .02rem;}
+.rights .head img:first-child{margin-right:.16rem;}
+.rights .head span{margin-right:.16rem;}
+.rights p{margin-bottom: 1rem; display: flex;justify-content: center;align-items: center;font-family: .PingFangSC-Light;font-size: .3rem;color: #00634C;margin-top: .16rem;}
+.rights .out{flex: 1;display: flex;flex-direction: column;justify-content:center;}
+.rights .top {display: flex;justify-content:center;align-items:flex-start;margin-bottom: 1rem;}
+.rights .top dl{display: flex;justify-content: center;align-items: center;flex-direction: column;width: 2.94rem;margin-top: 0;}
+.rights .top dl dt img{width: 1.8rem; height: 1.8rem;}
+.rights .top dl dd{font-family: .PingFangSC-Regular;font-size: .28rem;color: #666666;text-align: center;}
+.rights .top .shang{margin: 0 22%;}
+.rights .top .xia{margin-right:20.6%;}
+/*Core System*/	
+.system{width: 100%;height: 100%;background: #E8E8E8;display: flex;justify-content: center;}
+.system .main{position: relative; width:7rem;height: 6.63rem;background: #F5F5F5;box-shadow: 0 6px 6px 0 rgba(0,0,0,0.10);border-radius: 6.08px; margin-top: 1.5rem;display: flex; align-items:center;flex-direction: column;}
+.system .main img{height: 1.9rem; margin-top: 0.46rem;}
+.system .main .main_head{position: absolute;width: 8rem;height: 1.5rem; left: 72%; margin-left: -4rem; top:.57rem;font-family: .PingFangSC-Medium;font-size: .4rem;color: #01614A;letter-spacing: 0.15px;}
+.system .main .main_head img{width: .7rem; height: .02rem;margin-bottom: .15rem;}
+.system .main .main_head img:first-child{margin-right:.16rem;}
+.system .main .main_head span{margin-right:.16rem;}
+.system .main p{font-family: .PingFangSC-Light;font-size:.3rem;color: #00634C;position: absolute; top: 1.43rem;text-align: center;width: 8rem;height: 1.5rem; left:50%; margin-left: -4rem;}
+.system .main .bottom{flex: 1;display:flex; justify-content: center;flex-direction: column; align-items: center;}
+.system .main .span{background: #01614A;border-radius: 6.08px;width: 4.58rem; height: .8rem;line-height: .8rem; font-family: MicrosoftYaHei;font-size:.3rem;color: #FFFFFF;text-align: center;margin-bottom: .3rem;}
+/*Apply for settlement */
+.apply{width: 100%; height: auto;display: flex; justify-content: center; flex-direction: column;}
+.apply .head{font-family: .PingFangSC-Medium;font-size:.4rem;color: #01614A;letter-spacing: 0.15px;margin-top:1rem;display: flex;justify-content: center;align-items: center;}
+.apply .head img{ width: .7rem; height: .02rem;}
+.apply .head img:first-child{margin-right:.16rem;}
+.apply .head span{margin-right:.16rem;}
+.apply p{font-family: .PingFangSC-Light;font-size:.3rem;color: #00634C;text-align: center;margin-bottom: 1rem;margin-top: .16rem;}
+.apply input{border:0;outline:none;font-family: PingFangSC-Regular;font-size: .28rem;color:#BBBBBB;width: 7rem; height: .8rem;margin: 0 auto;border: 1px solid #BBBBBB;border-radius: 8px;text-indent:.24rem; margin-bottom: .24rem;}
+.apply #six{background:#00A780;border-radius: 8px;font-family: PingFangSC-Regular;font-size:.3rem;color:#FFFFFF;}
+.apply input#five{margin-bottom: .42rem;}
+.apply .p{font-family: PingFangSC-Regular;font-size:.22rem;color: #8A8A8A;line-height: .28rem;text-align: center;margin-bottom: 2.8rem;}
+.apply .img{text-align: center;width: 4rem; height: 1.39rem;margin: 0 auto;margin-bottom: 1.086rem;}
+/*placehold字体颜色兼容*/
+input::-webkit-input-placeholder{ color:#BBBBBB;}
+input:-moz-placeholder{ color: #BBBBBB;}
+input::-moz-placeholder{ color: #BBBBBB;}
+input:-ms-input-placeholder{ color:#BBBBBB;}
+/*脚部*/
+.footer{width: 100%; height: auto; background: #BBBBBB;padding-top: .85rem; padding-bottom: 1.57rem;} 
+.footer p{font-family: .PingFangSC-Regular;font-size:.2rem;color: #FFFFFF;letter-spacing: 0;line-height: .4rem;text-align: center;}
+
+/*本页面字体*/
+@font-face { 
+font-family: .PingFangSC-Light;
+src: url('font/PingFang Light.ttf') format('truetype');
+} 
+@font-face { 
+font-family: .PingFangSC-Regular;
+src: url('font/PingFang Regular.ttf') format('truetype');
+} 

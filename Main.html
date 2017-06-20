@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>第三方推荐系统</title>
+		<link rel="stylesheet" href="css/common.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css"/>
+		<script type="text/javascript" src="js/jquery-3.2.1.min.js" ></script>
+		
+	</head>
+	<style type="text/css">
+	</style>
+		<div class="container">
+			<div class="left_main">
+				<p  onclick="new_()">添加生产者</p>
+				<p  onclick="list()">生产者列表</p>
+			</div>
+			<div class="right_main"></div>
+		</div>
+	<script type="text/javascript">
+		$(function(){
+				$(".right_main").load("Upload.html");
+		});
+		function new_(){
+			$(".right_main").load("Upload.html");
+		}
+		function list(){
+			$(".right_main").load("Producer_list.html");
+		}
+	</script>
+	
+</html>

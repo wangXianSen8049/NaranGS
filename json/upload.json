@@ -1,0 +1,38 @@
+{ 
+	"name":"",
+	"charger":"",
+	"hotline":"",
+	"location":"",
+	"logo":"",
+	"license":"",
+	"businessLicense":"",
+	"hygieneLicense":"",
+	"otherLicenses":{
+		"one":"",
+		"two":"",
+		"three":"",
+		"four":""
+	},
+	"envAssessmentReport":"",
+	"envQualityReport":"",
+	"envImpactReport":"",
+	"otherReport":{
+		"one":{
+			"texts":"",
+			"files":""
+		}
+	},
+	"recommendation":"",
+	"auditForm":"",
+	"legalOpinion":"",
+	"products":{
+		"one":{
+			"name":"",
+			"estimatedYield":"",
+			"qualityReport":"",
+			"spec":"",
+			"pics":""
+		}
+		
+	}
+}

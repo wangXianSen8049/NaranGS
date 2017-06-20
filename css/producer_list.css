@@ -1,0 +1,26 @@
+html,body{width: 100%; height:auto;background: #F5F5F5;box-sizing: border-box; font-size: 100px;overflow-x:auto;/*min-width: 900px;*/}
+.shenhe{width:8.99rem;height:auto;background: #FFFFFF;border: 1px solid #EEEEEE;border-radius: 4px;margin: 1.46rem  auto .5rem;}
+.head{width: 100%; height:.89rem;background: #01614A; display: flex; justify-content: center; align-items: center; position: relative; }
+.head p{font-family: .PingFangSC-Medium;font-size:.3rem;color: #FFFFFF;letter-spacing: 0.11px;margin-right: .12rem;}
+.head span{width:.52rem; height: .02rem;background: #FFFFFF;}
+.head span:first-child{margin-right: .12rem;}
+/*列表*/
+table{width: 100%;}
+table tr th{font-family: PingFangSC-Regular;font-size:.2rem;color: #666666;text-align: center;font-weight: normal;color:#666666; height:.82rem;border-bottom: 1px solid #EEEEEE;}
+table tr td{text-align: center;font-family: .PingFangSC-Medium; font-size:.2rem;color: #333333;letter-spacing: 0.08px;height: 1rem; line-height: 1rem;}
+table tr td .a1{ display: inline-block; border: 1px solid #333333;border-radius: 2.95px;width:.736rem; height:.44rem;line-height:.44rem;font-family: PingFangSC-Regular;font-size:.18rem;color: #333333;}
+table tr td .a2{display: inline-block;margin-left: .1rem; background: #00A780;border-radius: 2.95px;width:.736rem; height:.44rem;line-height:.44rem;font-family: PingFangSC-Regular;font-size:.18rem;color: white;}
+.xinzeng{ position: absolute;right:.25rem;width: 1.33rem; height: .44rem;font-family: PingFangSC-Regular;font-size:.18rem;color: #FFFFFF;text-align: center;line-height: .44rem;vertical-align: middle;}
+.xinzeng img{width:.216rem; height: .216rem;  margin-right: .08rem; display: inline-block;vertical-align: middle;}
+/*按钮的颜色改变*/
+table tr td .a1:active{background: #333; color: white;}
+table tr td .a2{background: #00a780;}
+table tr td .a2:hover{ background: #31b798;}
+table tr td .a2:active{ background: #009572;}
+.a1,.a2{cursor: pointer;}
+
+/*导航*/
+.nav{width: 100%; height: auto; margin-bottom: 1.46rem;}
+.pagingUl{width:8.99rem;display:flex;justify-content:center;align-items: center; margin-bottom: .1rem; margin: 0 auto; }
+.pagingUl li{font-size: .12rem;border: 1px solid #333333; padding: .1rem;margin-right: .1rem; cursor: pointer;}
+.yanse{background: #00a780; color: white; border: none;}
